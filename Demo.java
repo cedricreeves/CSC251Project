@@ -4,7 +4,7 @@ public class Demo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Asking user to enter necessary information
+        // Ask the user to enter their information
         System.out.println("Please enter the Policy Number:");
         String policyNumber = scanner.nextLine();
 
@@ -29,10 +29,9 @@ public class Demo {
         System.out.println("Please enter the Policyholder's Weight (in pounds):");
         double weight = Double.parseDouble(scanner.nextLine());
 
-        // Creating a Policy object using the constructor with arguments
         Policy policy = new Policy(policyNumber, providerName, firstName, lastName, age, smokingStatus, height, weight);
 
-        // Displaying policy information
+        // Policy information
         System.out.println("Policy Number: " + policy.getPolicyNumber());
         System.out.println("Provider Name: " + policy.getProviderName());
         System.out.println("Policyholder's First Name: " + policy.getFirstName());
@@ -42,11 +41,11 @@ public class Demo {
         System.out.println("Policyholder's Height: " + policy.getHeight() + " inches");
         System.out.println("Policyholder's Weight: " + policy.getWeight() + " pounds");
 
-        // Calculating and displaying BMI
+        // Calculating BMI
         double bmi = policy.calculateBMI();
         System.out.println("Policyholder's BMI: " + bmi);
 
-        // Calculating and displaying insurance price
+        // Calculating insurance price
         double price = policy.calculateInsurancePrice();
         System.out.println("Policy Price: $" + price);
     }

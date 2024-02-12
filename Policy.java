@@ -9,7 +9,6 @@ public class Policy {
     private double height;
     private double weight;
 
-    // No-arg constructor
     public Policy() {
         this.policyNumber = "";
         this.providerName = "";
@@ -21,7 +20,6 @@ public class Policy {
         this.weight = 0.0;
     }
 
-    // Constructor with arguments
     public Policy(String policyNumber, String providerName, String firstName, String lastName, int age, String smokingStatus, double height, double weight) {
         this.policyNumber = policyNumber;
         this.providerName = providerName;
@@ -98,12 +96,12 @@ public class Policy {
         this.weight = weight;
     }
 
-    // Method to calculate BMI
+    // Calculate BMI
     public double calculateBMI() {
         return (weight * 703) / (height * height);
     }
 
-    // Method to calculate insurance price
+    // Calculate insurance price
     public double calculateInsurancePrice() {
         double baseFee = 600;
         double additionalFee = 0;
